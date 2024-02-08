@@ -1,0 +1,57 @@
+body {
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.btn-open {
+    border: 1px solid black;
+    margin: 100px;
+    padding: 50px;
+    font-size: 24px;
+}
+
+.modal {
+    position: relative;
+    display: none;
+    max-width: 700px;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.modal__window {
+    position: relative;
+    margin: 50px;
+    padding: 50px;
+    border: 1px solid rgb(88, 87, 87);
+    border-radius: 15px;
+    background: white;
+}
+
+.modal__close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 24px;
+    color: red;
+    background: white;
+}
+
+._active {
+    display: block;
+}
+.wrapper {
+    position: relative;
+    height: 100vh;
+}
+.wrapper._active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    background: rgba(34, 34, 34, 0.5);
+}
