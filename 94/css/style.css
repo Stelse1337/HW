@@ -266,6 +266,100 @@ body {
 	bottom: 0px;
 	transform: rotate(-45deg);
 }
+/* =============================================== */
+
+.footer {
+  background: #ab8261;
+  color: var(--fonovyy-svetlyy);
+}
+
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 15px;
+  padding: 30px 0 60px;
+}
+
+.footer__col:not(:first-child) {
+  padding-top: 30px;
+}
+
+.footer__col:last-child {
+  margin-left: 60px;
+}
+
+.footer__col-item {
+  margin-bottom: 20px;
+}
+
+.footer__col-link {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.footer__col-link::after {
+  display: block;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	transform: translate(-13px, -13px);
+	content: '';
+	height: 34px;
+	width: 34px;
+	background: var(--akcentnyy);
+	border-radius: 50%;
+	opacity: 0;
+	transition: all 0.4s;
+}
+.footer__col-link:hover::after{
+  opacity: 1;
+}
+
+.footer__contact-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+.footer__contact-icon {
+  display: inline-block;
+  height: 24px;
+  margin-right: 8px;
+}
+.footer__contact-link {
+  display: inline-block;
+}
+
+.footer__logo-text {
+  margin-bottom: 20px;
+}
+
+.socials__list {
+  display: flex;
+  gap: 15px;
+  line-height: 0;
+}
+.socials__link path {
+  transition: all .4s;
+}
+.socials__link:hover path {
+  fill: var(--akcentnyy);
+}
+
+.footer__col-tel a {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 160%;
+  text-transform: uppercase;
+  transition: all .4s;
+}
+.footer__col-tel a:hover {
+  color: var(--akcentnyy);
+}
+
+.footer__col-copy{
+  color: #dec5b1;
+  margin-top: 47px;
+}
 
 /* ================================== */
 @media (max-width: 1200px) {
@@ -284,9 +378,18 @@ body {
 	.hero__player > img {
 		width: 100%;
 	}
+
+	.footer__inner {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.footer__col:last-child {
+		margin-left: 0;
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 900px) {
 	.header__nav {
 		position: fixed;
 		inset: 0;
@@ -315,6 +418,25 @@ body {
 	.burger-icon {
 		display: flex;
 		align-items: center;
+		justify-content: center;
+	}
+
+	.footer__inner {
+		grid-template-columns: none;
+		justify-content: center;
+		text-align: center;
+		gap: 0;
+	}
+
+	.footer__contact-item {
+		justify-content: center;
+	}
+
+	.footer__col:last-child {
+		padding: 0;
+	}
+
+	.socials__list {
 		justify-content: center;
 	}
 }
