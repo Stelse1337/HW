@@ -810,4 +810,7 @@ body {
 	.modal__window {
 			padding: 0 15px 45px;
 	}
+	.modal {
+		padding: 15px;
+	}
 }
