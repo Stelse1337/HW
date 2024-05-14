@@ -1,0 +1,75 @@
+:root {
+	--akcentnyy: #ffa55c;
+	--akcentnyy-2: #ceaad0;
+	--fonovyy: #ffe0cb;
+	--fonovyy-svetlyy: #fff9f4;
+	--zagolovochnyy: #1f1711;
+	--nabornyy: #312c27;
+	--fioletovyy: #704174;
+	--disabled: #e1d9e1;
+	--inputy: #ac907a;
+	--font-family: "Montserrat", sans-serif;
+	--second-family: "Gabriola", sans-serif;
+	--third-family: "Inspiration", sans-serif;
+	--transition: all .4s;
+	--border-radius: 20px;
+}
+
+body {
+	font-family: 'Montserrat', 'Arial', sans-serif;
+	line-height: 1.5;
+	background-color: var(--fonovyy-svetlyy);
+	color: var(--nabornyy);
+}
+
+.body--opened-menu {
+	overflow: hidden;
+}
+
+.wrapper {
+	min-height: 100%;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+.main__gallery {
+	padding-bottom: 140px;
+}
+
+.container {
+	max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 15px;
+	height: 100%;
+}
+
+.title {
+	font-family: var(--second-family);
+	font-size: 74px;
+	line-height: 0.82;
+	color: var(--zagolovochnyy);
+}
+
+.button {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.6;
+	width: 100%;
+	text-align: center;
+	border-radius: 60px;
+	color: var(--nabornyy);
+	background: var(--akcentnyy);
+	padding: 18px;
+	transition: 0.4s;
+}
+
+.button:hover {
+	background: #ff9138;
+}
